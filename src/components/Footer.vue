@@ -1,34 +1,31 @@
 <template>
     <footer class="main-footer">
       <!-- Services block-->
-      <div class="bg-gray-100 text-dark-700 py-6">
+      <div class="bg-white-100 text-dark-700 py-6">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 service-column">
-              <svg class="svg-icon service-icon">
+              <!-- <svg >
                 <use xlink:href="#delivery-time-1"> </use>
-              </svg>
+              </svg> -->
+              <img class="svg-icon service-icon" src="/assets/media/camion.gif" alt="">
               <div class="service-text">
-                <h6 class="text-uppercase">Free shipping &amp; return</h6>
-                <p class="text-muted fw-light text-sm mb-0">Free Shipping over $300</p>
+                <h6 class="text-uppercase">Envio gratuito &amp; devoluciones</h6>
+                <p class="text-muted fw-light text-sm mb-0">Envio gratuito para compras superiores a $200.000</p>
               </div>
             </div>
             <div class="col-lg-4 service-column">
-              <svg class="svg-icon service-icon">
-                <use xlink:href="#money-1"> </use>
-              </svg>
+              <img class="svg-icon service-icon" src="/assets/media/euro.gif" alt="">
               <div class="service-text">
-                <h6 class="text-uppercase">Money back guarantee</h6>
-                <p class="text-muted fw-light text-sm mb-0">30 Days Money Back Guarantee</p>
+                <h6 class="text-uppercase">Garantía de devolución de dinero</h6>
+                <p class="text-muted fw-light text-sm mb-0">30 Días de garantia de devolución</p>
               </div>
             </div>
             <div class="col-lg-4 service-column">
-              <svg class="svg-icon service-icon">
-                <use xlink:href="#customer-support-1"> </use>
-              </svg>
+              <img class="svg-icon service-icon" src="/assets/media/tailandes.gif" alt="">
               <div class="service-text">
-                <h6 class="text-uppercase">020-800-456-747</h6>
-                <p class="text-muted fw-light text-sm mb-0">24/7 Available Support</p>
+                <h6 class="text-uppercase">300-000-00-00</h6>
+                <p class="text-muted fw-light text-sm mb-0">24/7 de Soporte en linea</p>
               </div>
             </div>
           </div>
@@ -42,41 +39,52 @@
               <div class="fw-bold text-uppercase text-lg text-dark mb-3">Sell<span class="text-primary">.</span></div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
               <ul class="list-inline">
-                <li class="list-inline-item"><a class="text-muted text-primary-hover" href="#" target="_blank" title="twitter"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a class="text-muted text-primary-hover" href="#" target="_blank" title="facebook"><i class="fab fa-facebook"></i></a></li>
-                <li class="list-inline-item"><a class="text-muted text-primary-hover" href="#" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-inline-item"><a class="text-muted text-primary-hover" href="#" target="_blank" title="pinterest"><i class="fab fa-pinterest"></i></a></li>
-                <li class="list-inline-item"><a class="text-muted text-primary-hover" href="#" target="_blank" title="vimeo"><i class="fab fa-vimeo"></i></a></li>
+                <li class="list-inline-item">
+                  <a class="text-muted text-primary-hover" href="#" target="_blank" title="twitter"></a>
+                  <img src="/assets/media/facebook.png" style="width: 18px;">
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-muted text-primary-hover" href="#" target="_blank" title="facebook"></a>
+                  <img src="/assets/media/whatsapp.png" style="width: 18px;">
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-muted text-primary-hover" href="#" target="_blank" title="instagram"></a>
+                  <img src="/assets/media/twitter-alt.png" style="width: 18px;">
+                </li>
+                <li class="list-inline-item">
+                  <a class="text-muted text-primary-hover" href="#" target="_blank" title="pinterest"></a>
+                  <img src="/assets/media/instagram.png" style="width: 18px;">
+                </li>
               </ul>
             </div>
             <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
-              <h6 class="text-uppercase text-dark mb-3">Shop</h6>
+              <h6 class="text-uppercase text-dark mb-3">Categorías</h6>
               <ul class="list-unstyled">
-                <li> <a class="text-muted" href="#">For Women</a></li>
-                <li> <a class="text-muted" href="#">For Men</a></li>
-                <li> <a class="text-muted" href="#">Stores</a></li>
-                <li> <a class="text-muted" href="#">Our Blog</a></li>
-                <li> <a class="text-muted" href="#">Shop</a></li>
+                <li> <a class="text-muted" href="#">Perifericos</a></li>
+                <li> <a class="text-muted" href="#">Componentes</a></li>
+                <li> <a class="text-muted" href="#">Smartphones</a></li>
+                <li> <a class="text-muted" href="#">Monitores</a></li>
+                <li> <a class="text-muted" href="#">Toda la tienda</a></li>
               </ul>
             </div>
             <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
-              <h6 class="text-uppercase text-dark mb-3">Company</h6>
+              <h6 class="text-uppercase text-dark mb-3">Ecommerce</h6>
               <ul class="list-unstyled">
-                <li> <a class="text-muted" href="#">Login                    </a></li>
-                <li> <a class="text-muted" href="#">Register                    </a></li>
-                <li> <a class="text-muted" href="#">Wishlist                    </a></li>
-                <li> <a class="text-muted" href="#">Our Products                    </a></li>
-                <li> <a class="text-muted" href="#">Checkouts                    </a></li>
+                <li> <a class="text-muted" href="#">Iniciar sesión                    </a></li>
+                <li> <a class="text-muted" href="#">Registrate                    </a></li>
+                <li> <a class="text-muted" href="#">Lista de deseos                    </a></li>
+                <li> <a class="text-muted" href="#">Nuestros productos                   </a></li>
+                <li> <a class="text-muted" href="#">Tus compras                   </a></li>
               </ul>
             </div>
             <div class="col-lg-4">
-              <h6 class="text-uppercase text-dark mb-3">Daily Offers & Discounts</h6>
+              <h6 class="text-uppercase text-dark mb-3">Boletín informativo</h6>
               <p class="mb-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
               <form action="#" id="newsletter-form">
                 <div class="input-group mb-3">
-                  <input class="form-control bg-transparent border-secondary border-end-0" type="email" placeholder="Your Email Address" aria-label="Your Email Address">
+                  <input class="form-control bg-transparent border-secondary border-end-0" type="email" placeholder="Tu correo electrónico... " aria-label="Your Email Address" style >
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary border-start-0" type="submit"> <i class="fa fa-paper-plane text-lg text-dark"></i></button>
+                    <button class="btn border-secondary border-start-0" type="submit" style="border-color: black;"><img src="/assets/media/avion-de-papel.png" style="width: 18px;"></button>
                   </div>
                 </div>
               </form>
@@ -89,7 +97,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
-              <p class="mb-md-0">&copy; 2020 Your company.  All rights reserved.</p>
+              <p class="mb-md-0">&copy; {{year}} Daniel Garcia.  Todos los derechos reservados.</p>
             </div>
             <div class="col-md-6">
               <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-md-end">
@@ -108,6 +116,11 @@
   <script>
   export default {
     name: 'Footer',
+    data(){
+      return {
+        year: new Date().getFullYear(),
+      }
+    }
   }
   </script>
   
