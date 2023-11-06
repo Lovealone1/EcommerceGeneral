@@ -41,7 +41,7 @@
               </div>
               <div class="py-2">
                 <p class="text-muted text-sm mb-1">{{item.categoria}}</p>
-                <h3 class="h6 text-uppercase mb-1">
+                <h3 class="h6 text-uppercase mb-1" style="text-overflow: ellipsis;overflow: hidden; white-space: nowrap;">
                   <a class="text-dark" href="detail.html">{{item.titulo}}</a>
                 </h3>
                 <span class="text-muted">{{convertCurrency(item.precio)}}</span>
@@ -108,8 +108,8 @@
               </div>
               <div class="py-2">
                 <p class="text-muted text-sm mb-1">{{item.categoria}}</p>
-                <h3 class="h6 text-uppercase mb-1">
-                  <a class="text-dark" href="detail.html">{{item.titulo}}</a>
+                <h3 class="h6 text-uppercase mb-1" style="text-overflow: ellipsis;overflow: hidden; white-space: nowrap;">
+                  <a class="text-dark">{{item.titulo}}</a>
                 </h3>
                 <span class="text-muted">{{convertCurrency(item.precio)}}</span>
               </div>
