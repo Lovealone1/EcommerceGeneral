@@ -96,7 +96,11 @@ export default {
             msm_error_login: ''
         }
     },
-
+    beforeMount() {
+        if(this.$store.state.token){
+            this.$router.push({name: 'home'});
+        }
+    },
     methods: {
         validar_registro(){
             if(!this.cliente.nombres){
@@ -117,7 +121,6 @@ export default {
                         this.msm_error = result.data.message;
                     }else{
                         this.msm_error = '';
-                        console.log(result);
                     }
                    
                 })
@@ -141,12 +144,12 @@ export default {
                         'Content-Type': 'application/json'
                     }
                 }).then((result)=>{
-                    console.log(result);
 
                     if(result.data.message){
                         this.msm_error_login = result.data.message;
                     }else{
                         this.$store.dispatch('saveToken',result.data.token);
+                        this.$store.dispatch('saveUser',JSON.stringify(result.data.cliente));
                         this.$router.push({name: 'home'});
                     }
 
@@ -154,7 +157,8 @@ export default {
                     console.log(error);
                 });
             }
-        }
+        },
+        
     },
 }
 </script>

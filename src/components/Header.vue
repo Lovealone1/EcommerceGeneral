@@ -15,6 +15,9 @@
             </div>
             <div class="col-sm-5 d-flex justify-content-end">
               <!-- Language Dropdown-->
+              <a style="cursor:pointer" v-if="$store.state.token" v-on:click="logout()">
+                <span><b>Cerrar sesión</b></span>
+              </a>
               <div class="dropdown border-end px-3"><a class="dropdown-toggle topbar-link" id="langsDropdown" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-haspopup="true" aria-expanded="false"><img class="topbar-flag" src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/flag/gb.svg" alt="english">English</a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="langsDropdown"><a class="dropdown-item text-sm" href="#"><img class="topbar-flag" src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/flag/de.svg" alt="german">German</a><a class="dropdown-item text-sm" href="#"> <img class="topbar-flag" src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/flag/fr.svg" alt="french">French</a></div>
               </div>
@@ -204,9 +207,13 @@
                 </div>
                 <!-- User Not Logged - link to login page-->
                 <div class="nav-item">
-                    <router-link class="navbar-icon-link" to="/login">
+                    <router-link v-if="!$store.state.token" class="navbar-icon-link" to="/login">
                       <img src="/assets/icons/user.png" style="width: 25px;" />
                         <span class="text-sm ms-2 ms-lg-0 text-uppercase text-sm fw-bold d-none d-sm-inline d-lg-none">Log in </span>
+                    </router-link>
+                    <router-link v-if="$store.state.token" class="navbar-icon-link" to="/login">
+                      <img src="/assets/icons/user.png" style="width: 25px;" />
+                        <span class="text-sm ms-2 ms-lg-0 text-uppercase text-sm fw-bold d-none d-sm-inline"> &nbsp; {{user.nombres.split(' ')[0]}} </span>
                     </router-link>
                 </div>
                 <!-- Cart Dropdown-->
@@ -306,9 +313,23 @@ import { RouterLink } from 'vue-router';
 
   export default {
     name: 'Header',
+    data() {
+      return {
+        user: JSON.parse(this.$store.state.user)
+      }
+    },
+    methods: {
+      logout(){
+          this.$store.dispatch('logout');
+        }
+    },
     components: { RouterLink }
 }
   </script>
   
- 
+ <style>
+.navbar-light .navbar-nav .nav-link, .navbar-hover-light:hover .navbar-nav .nav-link, .navbar-fixed-light.fixed-top .navbar-nav .nav-link {
+    color: rgb(255 255 255) !important;
+}
+</style>
   

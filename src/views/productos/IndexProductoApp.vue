@@ -48,20 +48,22 @@
                 <div class="row" id="my-table">
                     <!-- product-->
                     <div class="col-xl-4 col-6" v-for="item in itemsForList">
-                    <div class="product">
-                        <div class="product-image">
-                             <div class="ribbon ribbon-danger" v-if="item.descuento">Oferta</div>
-                            <img class="img-fluid" :src="$url+'/obtener_portada_producto/'+item.portada" alt="product">
-                       
-                        </div>
-                        <div class="py-2">
-                             <p class="text-muted text-sm mb-1">{{item.categoria}}</p>
-                            <h3 class="h6 text-uppercase mb-1" style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;">
-                                <a class="text-dark" href="detail.html">{{item.titulo}}</a>
-                            </h3>
-                            <span class="text-muted">{{convertCurrency(item.precio)}}</span>
-                        </div>
-                    </div>
+                        <router-link :to="{name: 'show-product', params: {slug: item.slug}}">
+                            <div class="product">
+                                <div class="product-image">
+                                    <div class="ribbon ribbon-danger" v-if="item.descuento">Oferta</div>
+                                    <img class="img-fluid" :src="$url+'/obtener_portada_producto/'+item.portada" alt="product">
+                            
+                                </div>
+                                <div class="py-2">
+                                    <p class="text-muted text-sm mb-1">{{item.categoria}}</p>
+                                    <h3 class="h6 text-uppercase mb-1" style="text-overflow:ellipsis;overflow: hidden;white-space: nowrap;">
+                                        <a class="text-dark" href="detail.html">{{item.titulo}}</a>
+                                    </h3>
+                                    <span class="text-muted">{{convertCurrency(item.precio)}}</span>
+                                </div>
+                            </div>
+                        </router-link>
                     </div>
                     <!-- /product-->
                    
