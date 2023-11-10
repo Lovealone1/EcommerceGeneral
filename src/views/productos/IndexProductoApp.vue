@@ -323,7 +323,6 @@
                 }
                 }).then((result)=>{
                     this.productos = result.data;
-                    console.log(this.productos);
                     this.productos_const = this.productos;
 
                     if(this.$route.query.subcategoria){

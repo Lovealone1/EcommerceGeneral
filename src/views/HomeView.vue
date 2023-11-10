@@ -193,7 +193,6 @@ export default {
       }).then((result) => {
         this.productos_recomendados = result.data;
         this.load_productos_recomendados = false;
-        console.log(this.productos_recomendados);
       }).catch((error) => {
         console.log(error);
       });

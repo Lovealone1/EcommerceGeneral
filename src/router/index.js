@@ -13,6 +13,7 @@ const routes = [
   {path: '/login', name: 'login',component: ()=>import('@/views/LoginApp.vue')},
   {path: '/shop', name: 'shop',component: ()=>import('@/views/productos/IndexProductoApp.vue')},
   {path: '/product/:slug', name: 'show-product',component: ()=>import('@/views/productos/ShowProductoApp.vue')},
+  {path: '/cart', name: 'cart',component: ()=>import('@/views/CarritoView.vue')},
 ]
 
 const router = new VueRouter({

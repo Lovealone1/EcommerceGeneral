@@ -84,12 +84,12 @@
                     </div>
                     </div>
                     <p class="mb-4 text-muted">{{producto.descripcion}}</p>
-                    <form action="#">
                     <div class="row">
                         <div class="col-sm-6 col-lg-12 detail-option mb-3">
                         <h6 class="detail-option-heading">{{ producto.str_variedad }}</h6>
-                        <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" style="margin-right: 3px;" :for="'variacion_'+item._id" v-for="item in variaciones"> {{item.variacion}}
-                            <input class="input-invisible" type="radio" name="size" value="value_0" :id="'variacion_'+item._id" required>
+                        <label class="btn btn-sm btn-outline-secondary detail-option-btn-label" style="margin-right: 3px;" :id="'variacion_'+item._id" :for="'variacion_'+item._id" v-for="item in variaciones"
+                        v-on:click="getVariacion(item._id)"> {{item.variacion}}
+                            <input class="input-invisible" type="radio" name="size" :value="item._id" :id="'variacion_'+item._id" required>
                         </label>
                         </div>
 
@@ -116,16 +116,16 @@
                         </div> -->
                         <div class="col-12 col-lg-6 detail-option mb-5">
                         <label class="detail-option-heading fw-bold">Cantidad</label>
-                        <input class="form-control detail-quantity" name="items" type="number" value="1">
+                        <input class="form-control detail-quantity" name="items" type="number" v-model="obj_carrito.cantidad">
                         </div>
                     </div>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                        <button class="btn btn-dark btn-lg mb-1" type="submit">Agregar al carrito</button>
+                        <button class="btn btn-dark btn-lg mb-1" type="button" v-on:click="add_cart()">Agregar al carrito</button>
                         </li>
                         <!-- <li class="list-inline-item"><a class="btn btn-outline-secondary mb-1" href="#"> <i class="far fa-heart me-2"></i>Add to wishlist</a></li> -->
                     </ul>
-                    </form>
+                    <span class="text-danger" v-if="msm_error">{{ msm_error }}</span>
                 </div>
                 </div>
             </div>
@@ -297,6 +297,7 @@ import { init_carrusel } from '../../../public/assets/js/theme.d7b4a888.js';
 import axios from 'axios';
 import currency_formatter from 'currency-formatter';
 import moment from 'moment';
+import $ from 'jquery';
 
 export default {
     name: 'ShowProdcutoApp',
@@ -306,6 +307,11 @@ export default {
             producto: {},
             variaciones: [],
             productos_relacionados: [],
+            obj_carrito: {
+                cantidad: 1,
+            },
+            user_data: JSON.parse(this.$store.state.user),
+            msm_error: '',
         }
     },
     methods: {
@@ -315,6 +321,9 @@ export default {
                     'Content-Type': 'application/json'
             }}).then((result) => {
                 this.producto = result.data.producto;
+                this.obj_carrito.producto = this.producto._id;
+                this.obj_carrito.cliente = this.user_data._id;
+
                 this.galeria = result.data.galeria;
                 this.variaciones = result.data.variaciones;
 
@@ -338,6 +347,35 @@ export default {
             }).catch((err) => {
                 console.log(err);
             });
+        },
+        getVariacion(value){
+            this.obj_carrito.variacion = value;
+            setTimeout(() => {
+                $('.detail-option-btn-label').removeClass('bg_variedad')
+                $('#variacion_'+value).addClass('bg_variedad')
+            }, 50);
+            console.log(this.obj_carrito);
+        },
+        add_cart(){
+            if (!this.obj_carrito.variacion) {
+                this.msm_error ='Seleccione la variacion';
+            }else if(!this.obj_carrito.cantidad){
+                this.msm_error ='Ingrese la cantidad';
+            }else if(this.obj_carrito.cantidad <= 0){
+                this.msm_error ='Ingrese una cantidad valida';
+            }else{
+                this.msm_error = '';
+                axios.post(this.$url+'/crear_producto_carrito',this.obj_carrito, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': this.$store.state.token,
+                }
+            }).then((result) => {
+                    this.$socket.emit('send_cart',true);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }
         }
     },
     beforeMount() {
@@ -373,4 +411,8 @@ export default {
     height: 60%;
 }
 
+.bg_variedad{
+    background: #b8b8b8 !important;
+    color: #000000 !important;
+}
 </style>
