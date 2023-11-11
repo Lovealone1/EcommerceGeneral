@@ -38,7 +38,7 @@
       </div>
       <!-- Top Bar End-->
       <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-dark bg-fixed-white navbar-fixed-light" style="background: #005f96 !important;">
+      <nav class="navbar navbar-expand-lg navbar-sticky navbar-airy navbar-dark bg-fixed-white navbar-fixed-light" style="background: #2c2c2c !important;">
         <div class="container-fluid">  
           <!-- Navbar Header  -->
           <a class="navbar-brand"  style="color:white !important" href="index.html"><svg class="navbar-brand-svg" viewBox="0 0 65 16" width="85" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,7 +257,7 @@
                                 <router-link class="btn btn-link text-dark me-3" to="/cart">Carrito
                                   <img src="/assets/icons/shopping-bag.png" style="width: 15px;">
                                 </router-link>
-                                <a class="btn btn-outline-dark" href="checkout1.html">Ir a pagar</a>
+                                <router-link class="btn btn-outline-dark" to="/checkout">Ir a pagar</router-link>
                             </div>
                         </div>
                     </div>

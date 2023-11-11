@@ -34,7 +34,7 @@
     export default {
         name: 'SidebarCliente'
     }
-</script>
+</script>   
 
 <style>
 
