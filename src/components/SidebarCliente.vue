@@ -13,10 +13,10 @@
                         </svg>Orders</span>
                     <div class="badge rounded-pill bg-dark fw-normal px-3">5</div></a>
 
-                    <a class="list-group-item d-flex justify-content-between align-items-center text-decoration-none" href="customer-account.html"><span>
+                    <router-link class="list-group-item d-flex justify-content-between align-items-center text-decoration-none" to="/cuenta/venta"><span>
                         <svg class="svg-icon svg-icon-heavy me-2">
                         <use xlink:href="#male-user-1"> </use>
-                        </svg>Profile</span></a>
+                        </svg>Compras</span></router-link>
                     <router-link active-class="active" class="list-group-item d-flex justify-content-between align-items-center text-decoration-none" to="/cuenta/direcciones"><span>
                         <svg class="svg-icon svg-icon-heavy me-2">
                         <use xlink:href="#navigation-map-1"> </use>
