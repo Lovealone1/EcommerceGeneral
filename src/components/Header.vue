@@ -216,7 +216,7 @@
                         <span class="text-sm ms-2 ms-lg-0 text-uppercase text-sm fw-bold d-none d-sm-inline dropdown-toggle" data-bs-target="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> &nbsp; {{user.nombres.split(' ')[0]}} 
                         </span>
                         <div class="dropdown-menu dropdown-menu-animated" aria-labelledby="categoryDropdownMenuLink" style="    left: -40px !important;">
-                            <a class="dropdown-item" href="category.html">Category - left sidebar   </a>
+                            <router-link class="dropdown-item" to="/cuenta/venta">Mis compras</router-link>
                             <router-link class="dropdown-item" to="/cuenta/direcciones">Direcciones</router-link>
                             <a class="dropdown-item" v-on:click="logout()">Cerrar sesión </a>
                         </div>
