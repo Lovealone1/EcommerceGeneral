@@ -3,8 +3,8 @@
             <!-- Customer Sidebar-->
             <div class="customer-sidebar card border-0"> 
             <div class="customer-profile"><a class="d-inline-block" href="#"><img class="img-fluid rounded-circle customer-image shadow" src="https://d19m59y37dris4.cloudfront.net/sell/2-0/img/photo/kyle-loftus-589739-unsplash-avatar.jpg" alt=""></a>
-                <h5>Julie Trnka</h5>
-                <p class="text-muted text-sm mb-0">Ostrava, Czech Republic</p>
+                <h5>Daniela Sierra</h5>
+                <p class="text-muted text-sm mb-0">Medellín, Colombia</p>
                     </div>
                     <nav class="list-group customer-nav">
                     <a class="list-group-item d-flex justify-content-between align-items-center text-decoration-none" href="customer-orders.html"><span>
