@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-    <section class="bg-dark" style="margin-top: 70px;">
+    <section class="bg-dark" style="margin-top: 25px;">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 text-white text-center py-7">
@@ -21,7 +21,8 @@
     <section class="pt-6 pb-5">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-xl-8 mx-auto text-center mb-5">
+            <h2 class="text-uppercase">Nuevos Productos</h2>
           </div>
         </div>
         <div class="row">
@@ -88,7 +89,12 @@
       </div>
     </section>
     <section class="pt-6 pb-5">
-      <div class="container"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 mx-auto text-center mb-5">
+            <h2 class="text-uppercase">Productos Recomendados</h2>
+          </div>
+        </div>
         <div class="row">
           <!-- product-->
           <div class="col-lg-3 col-md-4 col-6" v-for="item in shuffleArray(productos_recomendados)">
