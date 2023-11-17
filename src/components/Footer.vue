@@ -64,15 +64,14 @@
               <li> <a class="text-muted" href="#">Periféricos</a></li>
               <li> <a class="text-muted" href="#">Componentes</a></li>
               <li> <a class="text-muted" href="#">IoT</a></li>
-              <li> <a class="text-muted" href="#">Toda la tienda</a></li>
+              <li> <router-link :to="{name: 'shop'}" class="text-muted">Toda la tienda</router-link></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
             <h6 class="text-uppercase text-dark mb-3">Usuario</h6>
             <ul class="list-unstyled">
-              <li> <a class="text-muted" href="#">Iniciar sesión                    </a></li>
-              <li> <a class="text-muted" href="#">Regístrate                    </a></li>
-              <li> <a class="text-muted" href="#">Nuestros productos                   </a></li>
+              <li> <router-link :to="{name: 'login'}" class="text-muted">Iniciar Sesión</router-link></li>
+              <li> <router-link :to="{name: 'login'}" class="text-muted">Regístrate</router-link></li>
               <li> <a class="text-muted" href="#">Tus compras                   </a></li>
             </ul>
           </div>
