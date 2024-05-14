@@ -11,7 +11,7 @@
             <p class="mb-5">Envíos gratuitos para compras superiores a $200.000 COP.</p>
             <p><router-link :to="{name: 'shop'}" class="btn btn-outline-light">Comprar</router-link></p>
           </div>
-          <div class="col-lg-6" style="background: right bottom url(https://i.imgur.com/K3AM2qf.png) no-repeat; background-size: contain;"></div>
+          <div class="col-lg-6" style="background: right bottom url(https://i.imgur.com/8rsHue9.png) no-repeat; background-size: contain;"></div>
         </div>
       </div>
     </section>
@@ -63,9 +63,9 @@
         </div>
         <div class="row">
           <div class="col-md-6 d-flex align-items-md-stretch mb-4 mb-md-0">
-            <div class="d-flex align-items-center text-white dark-overlay w-100 text-center py-6 py-md-0" style="background: center center url(https://i.imgur.com/qaEwurI.png) no-repeat; background-size: cover;"><a class="tile-link" href="category.html"> </a>
+            <div class="d-flex align-items-center text-white dark-overlay w-100 text-center py-6 py-md-0" style="background: center center url(https://i.pinimg.com/736x/c0/5f/63/c05f6305c78a3c13732621477b5fb8a3.jpg) no-repeat; background-size: cover;"><a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay w-100 overlay-content">
-                <h2 class="display-2 fw-bold text-uppercase mb-0" style="font-size: 80px;">Periféricos </h2>
+                <h2 class="display-2 fw-bold text-uppercase mb-0" style="font-size: 80px;">Zona de moda </h2>
               </div>
             </div>
           </div>
@@ -73,14 +73,14 @@
             <div class="card border-0 text-white text-center mb-4 dark-overlay"> <img class="card-img" src="https://miro.medium.com/v2/resize:fit:2000/1*goGPwn50r5CuNC_dlXnU9A.jpeg" alt="Smartphones"><a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="text-center w-100 overlay-content">
-                  <h2 class="display-4 fw-bold text-uppercase text-center mb-0">Celulares</h2>
+                  <h2 class="display-4 fw-bold text-uppercase text-center mb-0">Tecnología</h2>
                 </div>
               </div>
             </div>
-            <div class="card border-0 text-white text-center  dark-overlay"> <img class="card-img" src="https://i.imgur.com/5Mmp6tD.png" alt="Componentes"><a class="tile-link" href="category.html"> </a>
+            <div class="card border-0 text-white text-center  dark-overlay"> <img class="card-img" src="https://i.pinimg.com/564x/ab/4d/01/ab4d01efe2fad057051779f22831f101.jpg" alt="Componentes"><a class="tile-link" href="category.html"> </a>
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="text-center w-100 overlay-content">
-                  <h2 class="display-4 fw-bold text-uppercase text-center mb-0">Componentes</h2>
+                  <h2 class="display-4 fw-bold text-uppercase text-center mb-0">Maletas</h2>
                 </div>
               </div>
             </div>
